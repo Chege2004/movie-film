@@ -1,9 +1,10 @@
+let url = "http://localhost:3000/films/"
 document.addEventListener("DOMContentLoaded", function () {
     loadPage();
 });
 
 function loadPage() {
-    fetch("http://localhost:3000/films/1")
+    fetch(`${url}1`)
         .then(response => response.json())
         .then(data => {
             const posterUrl = document.getElementById("poster");
@@ -18,10 +19,9 @@ function loadPage() {
             posterUrl.src = data.poster;
             title.textContent = data.title;
             description.textContent = data.description;
-            runtime.textContent = data.runtime;
+            runtime.textContent = `${data.runtime} minutes`;
             showtime.textContent = data.showtime;
             availableTickets.textContent = `Available Tickets: ${ticketsAvailable}`;
         })
         .catch(error => console.error('Error fetching data:', error));
 }
-
