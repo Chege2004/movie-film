@@ -16,8 +16,8 @@ Flatdango is a web application that allows users to browse and purchase tickets 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/flatdango.git
-   cd flatdango
+   git clone https://github.com/Chege2004/movie-film.git
+   cd workspace
 
 Ensure you have a local server running to serve the films endpoint. You can use a tool like json-server to simulate an API.
 
