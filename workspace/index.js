@@ -1,6 +1,7 @@
 let url = "http://localhost:3000/films/"
 document.addEventListener("DOMContentLoaded", function () {
     loadPage();
+    loadFilmList();
 });
 
 function loadPage() {
@@ -24,4 +25,22 @@ function loadPage() {
             availableTickets.textContent = `Available Tickets: ${ticketsAvailable}`;
         })
         .catch(error => console.error('Error fetching data:', error));
+}
+
+function loadFilmList() {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const filmList = document.getElementById("films");
+            filmList.innerHTML = ''; // Clear any existing content
+
+            data.forEach(film => {
+                const filmItem = document.createElement("li");
+                filmItem.className = "film item";
+                filmItem.textContent = film.title;
+                filmItem.addEventListener("click", () => loadFilmDetails(film.id));
+                filmList.appendChild(filmItem);
+            });
+        })
+        .catch(error => console.error('Error fetching film list:', error));
 }

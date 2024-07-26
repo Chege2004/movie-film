@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="/workspace/index.css">
 </head>
 <body>
-    <div id="app">
+    <div class = "container" id="app">
+        <div id ="films-container">
+            <header id ="films-header">MOVIE LIST</header>
+            <hr>
+            <ul id="films"></ul>
+            
+        </div>
         <div id="movie-details">
             <img id="poster" src="" alt="Movie Poster">
             <h2 id="title"></h2>
@@ -16,9 +22,6 @@
             <p>Showtime: <span id="showtime"></span></p>
             <p>Available Tickets: <span id="available-tickets"></span></p>
             <button id="buy-ticket">Buy Ticket</button>
-        </div>
-        <div>
-        <ul id="films"></ul>
         </div>
     </div>
     <script src="/workspace/index.js"></script>
