@@ -1,0 +1,39 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%; 
+    grid-gap: 20px; 
+    padding: 20px;
+}
+
+#movie-details {
+    margin: 0;
+}
+
+#films-container {
+    margin: 0;;
+}
+
+#films {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: yellowgreen
+}
+
+.film.item {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.films-header {
+    background-color: #3DC2EC;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.film.item:hover {
+    background-color: #e0e0e0;
+}
